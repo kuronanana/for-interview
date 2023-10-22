@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="interview.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+		$(window).on('scroll', function() {
+		if ($(window).width() <= 768) {
+    		// 當滾動距離超過1500px時，開始淡出左側內容
+   		var scrollPos = $(this).scrollTop();
+		var opacityValue = 1 - scrollPos / 1500;
+
+		// 設定透明度
+		$('.left-content').css('opacity', opacityValue);
+
+		var minHeight = 50;  // 這是左側區域的最小高度，可以根據需要調整。
+
+		$('.left-content').css('opacity', opacityValue);
+		
+		// 根據滾動位置調整高度
+		var heightValue = minHeight + (1 - opacityValue) * (100 - minHeight) + '%';
+		$('.left-content').css('height', heightValue);
+		}
+		// if(opacityValue <= 0) {
+		// $('.left-content').css('display', 'none');
+		// } else if($('.left-content').css('display') === 'none' && opacityValue > 0) {
+		// $('.left-content').css('display', 'block');
+		// }
+
+		// // 當滾動到最上方，左側內容再次完全顯示
+		// if (scrollPos < 200) {
+		// 	$('.left-content').css('opacity', 1);
+		// }
+		
+		});
+
+    
+    		
+	</script>
+	<title>我的個人履歷</title>
+
+</head>
+
+<body class="fadeInElement">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">曾俊霖</a>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+
+		 <ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#autobiography">自傳</a>
+			</li>
+		    	<li class="nav-item active">
+
+		      	<a class="nav-link" href="#experience">工作經驗</a>
+		    	</li>
+
+		    	<li class="nav-item">
+		  	<a class="nav-link" href="#skills">技能</a>
+		    	</li>
+			<li class="nav-item">
+			<a class="nav-link" href="#work">作品</a>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	<!-- 重點資料用側欄形式 -->
+	<div class="container-fluid">
+		<div class="row">
+		<!-- 左側欄位 -->
+			<div class="col-3 fadeInElement left-content">
+				<h2>關於我</h2>
+				<!-- 基本資料列表 -->
+				<!-- 基本資料 -->
+				<section class="profile-info">
+					<h3>曾俊霖</h3>
+					<img src="https://i.imgur.com/lyTg6MS.jpg" alt="曾俊霖的照片" class="profile-image" width="120" height="150">
+					<p><span><strong>最高學歷</strong></span><br>修平科技大學資訊管理學系 四技畢業</p>
+					<p><span><strong>希望職稱</strong></span>&nbsp;&nbsp;前端工程師/後端工程師</p>
+					<p><span><strong>聯絡方式</strong></span>&nbsp;&nbsp;<a href="tel:+886-0968763612">+886-0968763612</a></p>
+					<p><span><strong>E-mail</strong></span>&nbsp;&nbsp;<a href="mailto:jceng0269@gmail.com">jceng0269@gmail.com</a></p>
+					<p>我在修平科技大學資訊管理學系接觸了網頁相關程式語言，如<strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>和<strong>CSS</strong>。
+					我的畢業專題主要負責程式編寫部分。儘管我的經驗還很淺，
+					但我對資訊相關領域有著極大的興趣和熱情，且不斷精進自己。</p>
+				</section>
+				
+				<!-- 技能列表 -->
+				<section class="skills-info">
+					<h5>技能</h5>
+					<p>HTML & css</p>
+					<p>PHP</p>
+					<p>Mysql</p>
+					<p>Python</p>
+				</section>
+				
+				<!-- 證照 -->
+				<section class="Certificate">
+					<h5>專業證照</h5>
+					<p>電腦軟體應用丙級</p>
+					<p>電腦裝修乙級</p>
+					<p>ERP生管模組</p>
+				</section>
+
+				<section>
+					<a href="https://github.com/kuronanana" class="button">
+					<i class="fab fa-github"></i> GitHub
+					</a>&nbsp;
+					<a href="https://medium.com/@dkct102020" class="button">
+						<i class="fab fa-medium"></i>Medium
+					</a>&nbsp;
+					<a href="https://www.linkedin.com/in/%E4%BF%8A%E9%9C%96-%E6%9B%BE-1a1693214/" class="button">
+						<i class="fab fa-linkedin"></i>Linkedin
+					</a>
+				</section>
+			</div>
+		<!-- 右側內容 -->
+		<div class="col-9 fadeInElement">
+			<section id="autobiography">
+				<h2>自傳</h2>
+				<p>
+				自高中選擇資訊科系以來，這條路上我走得磕磕絆絆，在我求學的早期，我必須坦誠，學業上的成績並不理想。但當我進入大學，隨著時間的推移和對專業領域的深入了解，我開始真正理解自己的目標及方向。事實上，到了大學的最後階段，我幾乎獨力完成了一個完整的點餐網站專題。這個網站不僅涵蓋了使用者註冊、登入、點餐等基礎功能，更加上了CRUD操作，如新增、修改、刪除和查詢資料庫。此外，它還提供了排行榜和自訂日期範圍的報表功能。
+				我很感激我的專題指導老師的建議和指導，但我也明白，如果不是自己主動提問並動手嘗試解決問題，這項作業將無法完成。在專題進行的這段期間，我必須同時兼顧課業與工作。儘管我每天的時間非常緊張，我還是願意利用時間來完成我的專題。曾有無數次，當周遭的人都沉浸在夢鄉時，我仍然坐在電腦前，思考程式邏輯，修復各種錯誤，或是調整網頁的版面設計。
+				這段時間，我學到的不只是技術和知識，更多的是如何面對困難、如何解決問題、以及如何持續學習和成長。我深知自己還有很多不足之處，但我也確信，這條路上的每一次努力，都使我更接近成為一名合格的工程師。
+				現在，站在新的起點上，我真誠地希望能得到一次展現自己的機會，進一步學習和成長並與團隊共同成長的工作環境。我相信，過去的經歷和努力，將成為我未來工作中最堅強的後盾。
+				</p>
+			</section>
+		<!-- 工作經驗部分 -->
+			<section id="experience" class="mt-4">
+				<h2>工作經驗以及在這過程中我學會什麼</h2>
+				<h5>必勝客餐飲服務人員 @富利餐飲股份有限公司</h5>
+				<p>
+					客戶服務與溝通：主動接待客人，並根據他們的需求進行結帳及取餐流程，致力於提供最佳的用餐體驗。<br>
+					客製化服務：深入了解並遵循客人的特殊需求或備註，如精確的菜餚擺盤和調整份量，以確保每位客人的飲食要求都被考慮到。<br>
+					多任務處理：在高壓環境下協助打包外帶食物，並在必要時提供外送服務，保證同時進行的多項任務都能夠高效且正確地完成。<br>
+					團隊合作與環境維護：與團隊緊密合作以確保客戶服務流程的順暢，且經常進行工作環境、設備及餐具的清潔，以維護整體的衛生及工作效率。
+				</p>
+			</section>
+		
+		<!-- 專題作業 -->
+			<section id="project" class="mt-4">
+					<h2>專題成就</h2>
+					<p>
+					使用html,css,php,mysql製作而成的簡易點餐網站
+					能提供使用者登入登出、點餐、結帳以及修改使用者帳號資料
+					並具有購物車，能夠新增、刪除、修改訂購的餐點等基本功能
+					能根據自訂日期生成日月報表，消費金額排行榜，
+					在首頁位置有一個使用亂數來決定店家的功能，用意是減少使用者思考時間，並提供用餐建議。
+					</p>
+			</section>
+
+			
+		<!-- 技能部分 -->
+			
+			<section id="skills" class="mt-4">
+				<h2>接觸過的程式語言</h2>
+				<ul>
+					<li>HTML, CSS</li>
+					<li>PHP</li>
+					<li>Mysql</li>
+					<li>Python</li>
+					<li>javascript</li>
+				</ul>
+				<h2>接觸過的框架</h2>
+				<ul>
+					<li>bootstrap</li>
+				</ul>
+				
+			</section>
+
+			<section id="work" class="mt-4">
+				<h2>過往作品</h2>
+				<ul>
+					<li>今天吃什麼點餐網站</li>
+					<li>個人履歷網站</li>
+					<li>個人名片網站</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</div>	
+	<footer>
+		<p class="text-center">版權所有 &copy; 2023 曾俊霖</p>
+	</footer>
+</body>
+
+</html>

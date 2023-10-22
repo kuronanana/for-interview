@@ -1,0 +1,94 @@
+/* 全局樣式 */
+
+    html{
+	height: 100%;
+    }
+    body {
+	font-family: 'Arial', sans-serif;
+	color: #fff;
+	background-color: #f4f4f4;
+	border: 0px;
+	margin: 0;
+	padding: 0;
+    }
+
+    section {
+	margin-bottom: 40px;
+    }
+    h2 {
+	margin-bottom: 20px;
+    }
+
+    
+    a {
+	color: #55a7ff;
+	text-decoration: none;
+	transition: color 0.3s;  /* 平滑的顏色轉換效果 */
+    }
+    
+    a:hover {
+	color: #0056b3;
+    }
+    
+    .col-3 {
+	background-color: #222222;
+	color: #fff;
+	padding: 20px;
+	box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* 右側的陰影效果 */
+    }
+
+    .col-9{
+	color:#222222;
+	background-color: #b0b5f1;
+	padding: 5% 5% 0px 5%;
+    }
+
+
+    @keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+    }
+    
+    .fadeInElement {
+	animation: fadeIn 2s ease-in-out;
+    }
+
+    .profile-image{
+	margin:20px;
+    }
+
+    footer{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	color: #222222;
+	background-color: #CACC90;
+    }
+    
+    .left-content {
+	transition: opacity 0.5s; /* 平滑的淡入淡出效果 */
+
+    }
+    @media (max-width: 768px) {
+	.left-content {
+	    opacity: 1;
+	}
+    }
+
+    .navbar {
+	display: none;
+    }
+    
+
+    @media (max-width: 768px) {
+	.navbar {
+	    display: block;
+	}
+    }
+
+    @media (max-width: 768px) { 
+	.col-3, .col-9 {
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	}
+    }
